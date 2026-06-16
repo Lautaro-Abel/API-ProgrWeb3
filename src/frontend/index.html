@@ -1,0 +1,110 @@
+<!--MI PERSONA DIGITAL (Login/Register)-->
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Persona Digital — Acceso</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <div class="container">
+        <!-- LOGIN -->
+        <div class="form-box login">
+            <form id="loginForm">
+                <h1>Acceso a la cuenta</h1>
+                <div class="input-box">
+                    <input type="text" id="loginCuil" placeholder="CUIL" required minlength="11" maxlength="11"
+                        pattern="[0-9]{11}" inputmode="numeric" title="Debe contener exactamente 11 números">
+                    <i class="fa-solid fa-user"></i>
+                </div>
+
+                <div class="input-box">
+                    <input type="password" id="loginPassword" placeholder="Contraseña" required minlength="6"
+                        maxlength="50" pattern="^\S{6,}$"> <i class="fa-solid fa-lock"></i>
+                </div>
+
+                <div class="forgot-link">
+                    <a href="recovery-password.html">¿Olvidaste tu contraseña?</a>
+                </div>
+                <div id="loginError" class="error-msg hidden">CUIL o contraseña incorrectos.</div>
+                <button type="submit" class="btn">Ingresar</button>
+            </form>
+        </div>
+
+        <!-- REGISTRO -->
+        <div class="form-box register">
+            <form id="registerForm">
+                <h1>Registro</h1>
+                <div class="input-box">
+                    <input type="text" id="regNombre" placeholder="Nombre" required minlength="2" maxlength="50"
+                        pattern="^[A-Za-z]+$" title="Solo se permiten letras"> <i class="fa-solid fa-user"></i>
+                </div>
+
+                <div class="input-box">
+                    <input type="text" id="regApellido" placeholder="Apellido" required minlength="2" maxlength="50"
+                        pattern="^[A-Za-z]+$" title="Solo se permiten letras">
+                </div>
+
+                <div class="input-box">
+                    <input type="text" id="regDni" placeholder="DNI" required minlength="8" maxlength="8"
+                        pattern="[0-9]{8}" inputmode="numeric" title="Debe contener exactamente 8 números"> <i
+                        class="fa-solid fa-address-card"></i>
+                </div>
+
+                <div class="input-box">
+                    <input type="text" id="regCuil" placeholder="CUIL" required minlength="11" maxlength="11"
+                        pattern="[0-9]{11}" inputmode="numeric" title="Debe contener exactamente 11 números">
+                </div>
+
+                <div class="input-box"> <input type="date" id="regFecha" required>
+                </div>
+
+                <div class="input-box">
+                    <input type="tel" id="regTelefono" placeholder="Teléfono" required minlength="10" maxlength="10"
+                        pattern="[0-9]{10}" inputmode="numeric" title="Debe contener exactamente 10 números">
+                    <i class="fa-solid fa-phone"></i>
+                </div>
+
+                <div class="input-box">
+                    <input type="email" id="regEmail" placeholder="Email" required maxlength="100" autocomplete="email">
+                    <i class="fa-solid fa-envelope"></i>
+                </div>
+
+                <div class="input-box">
+                    <input type="password" id="regPassword" placeholder="Contraseña" required minlength="6"
+                        maxlength="50" pattern="^\S{6,}$" autocomplete="new-password"
+                        title="Debe tener mínimo 6 caracteres y no contener espacios"> <i class="fa-solid fa-lock"></i>
+                </div>
+
+                <div id="registerError" class="error-msg hidden">
+                    Completá todos los campos.
+                </div>
+
+                <button type="submit" class="btn">Crear cuenta</button>
+            </form>
+        </div>
+
+        <!-- Toggle Box -->
+        <div class="toggle-box">
+            <div class="toggle-panel toggle-left">
+                <h1>¡Bienvenido!</h1>
+                <p>¿No tenés una cuenta?</p>
+                <button class="btn register-btn">Registrarme</button>
+            </div>
+            <div class="toggle-panel toggle-right">
+                <h1>¡Hola de nuevo!</h1>
+                <p>¿Ya tenés una cuenta?</p>
+                <button class="btn login-btn">Ingresar</button>
+            </div>
+        </div>
+    </div>
+    <script type="module" src="index.js" defer></script>
+</body>
+
+</html>

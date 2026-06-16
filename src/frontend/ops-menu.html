@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Persona - Panel Operativo</title>
+    <link rel="stylesheet" href="menu.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+
+    <!-- Navegador -->
+    <header class="top-navbar">
+        <div class="logo-container" data-tab="inicio" data-nav-target="nav-inicio">
+            <i class="fa-solid fa-leaf logo-icon"></i>
+            <span class="logo-text">Mi Persona</span>
+        </div>
+        <nav class="top-menu">
+            <ul>
+                <li id="nav-inicio" class="active" data-tab="inicio">Inicio</li>
+
+
+
+                <li data-tab="usuarios">Usuarios</li>
+                <li data-tab="gestion">Gestión</li>
+                <li data-tab="asignaciones">Asignaciones</li>
+                <li>
+                    <button id="logoutBtn" type="button" class="logout-link" aria-label="Cerrar sesión">
+                        <i class="fa-solid fa-right-from-bracket"></i>
+                        Salir
+                    </button>
+                </li>
+            </ul>
+        </nav>
+        <div class="menu-toggle">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+    </header>
+
+    <!-- Main -->
+    <main class="main-content">
+
+        <!-- Inicio -->
+        <section id="inicio" class="tab-content active">
+            <div class="hero-info">
+
+                <h2 id="welcomeTitle">Panel de Operaciones</h2>
+
+                <p id="welcomeDescription">
+                    Administración de usuarios, certificados, licencias y turnos.
+                </p>
+
+                <div class="hero-buttons">
+
+                    <button type="button" class="btn-primary" data-tab="usuarios">
+                        Ver Usuarios
+                    </button>
+
+                    <button type="button" class="btn-secondary" data-tab="gestion">
+                        Gestión
+                    </button>
+
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Perfil -->
+        <section id="usuarios" class="tab-content">
+
+            <div class="section-header">
+                <h3 class="section-title">Usuarios</h3>
+                <p>Consultar cuentas registradas en el sistema.</p>
+            </div>
+
+            <div class="cards-grid">
+
+                <button type="button" id="showUsers" class="card">
+                    <i class="fa-solid fa-users"></i>
+                    <span>Ver Usuarios</span>
+                </button>
+
+            </div>
+
+        </section>
+
+        <!-- Admin -->
+        <section id="gestion" class="tab-content">
+
+            <div class="section-header">
+                <h3 class="section-title">Gestión de Recursos</h3>
+                <p>Administrar certificados, licencias y turnos.</p>
+            </div>
+
+            <div class="cards-grid">
+
+                <button type="button" id="createCertificateBtn" class="card">
+                    <i class="fa-solid fa-file-circle-plus"></i>
+                    <span>Crear Certificado</span>
+                </button>
+
+                <button type="button" id="createLicenceBtn" class="card">
+                    <i class="fa-solid fa-id-card"></i>
+                    <span>Crear Licencia</span>
+                </button>
+
+                <button type="button" id="createTurnBtn" class="card">
+                    <i class="fa-solid fa-calendar-plus"></i>
+                    <span>Crear Turno</span>
+                </button>
+
+            </div>
+
+        </section>
+
+        <section id="asignaciones" class="tab-content">
+
+            <div class="section-header">
+                <h3 class="section-title">Asignaciones</h3>
+                <p>Asignar documentos y credenciales a ciudadanos.</p>
+            </div>
+
+            <div class="cards-grid">
+
+                <button type="button" id="assignCertificateBtn" class="card">
+                    <i class="fa-solid fa-file-circle-check"></i>
+                    <span>Asignar Certificado</span>
+                </button>
+
+                <button type="button" id="assignLicenceBtn" class="card">
+                    <i class="fa-solid fa-id-card-clip"></i>
+                    <span>Asignar Licencia</span>
+                </button>
+            </div>
+        </section>
+
+        <section id="resultPanel" class="result-panel hidden">
+            <h3 id="resultTitle"></h3>
+            <div id="resultContent"></div>
+        </section>
+
+    </main>
+    <script type="module" src="ops-menu.js" defer></script>
+</body>
+
+</html>
