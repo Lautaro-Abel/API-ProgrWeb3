@@ -1,6 +1,6 @@
 # Mi Persona - Backend
 
-Backend de la aplicación **Mi Persona**, encargado de autenticación, autorización, acceso a base de datos y lógica de negocio.
+Backend de la aplicación **Mi Persona**, encargado de autenticación, autorización, acceso a base de datos y lógica de la aplicación.
 
 ---
 
